@@ -23,6 +23,8 @@ export default {
 
 
 
-<style>
+<style lang="scss">
+
+@use './assets/';
 
 </style>
