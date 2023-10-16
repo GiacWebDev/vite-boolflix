@@ -14,13 +14,27 @@ export default {
 
 <template>
 
-  <div class="container debug">
-    <div class="row row-cols-4">
-      <div class="col">
+  <!-- queste col dovranno essere impostate con un ciclo ed al loro interno mettere la card/ -->
 
+  <div class="container debug align-items-center">
+    <div class="row row-cols-4">
+
+      <div class="col p-3">
         <Card />
-  
       </div>
+      <div class="col p-3">
+        <Card />
+      </div>
+      <div class="col p-3">
+        <Card />
+      </div>
+      <div class="col p-3">
+        <Card />
+      </div>
+      <div class="col p-3">
+        <Card />
+      </div>
+
     </div>
   </div>
 

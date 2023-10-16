@@ -21,10 +21,12 @@
     top: 10;
     width: 100%;
     height: 100%;
+    padding: 10px;
     background-color: rgba(0,0,0,0.500);
-    
+
     .overview {
       overflow-y: auto;
+      height: 150px;
     }
   }
 

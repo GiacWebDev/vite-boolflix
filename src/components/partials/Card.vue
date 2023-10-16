@@ -19,12 +19,11 @@ export default {
       <h1>Titolo Film o Serie TV</h1>
       <h4>Titolo Originale</h4>
 
-      bandiera
-
-      stelle
+      <h5>bandiera</h5>
+      <h5>stelle</h5>
 
       <div class="overview debug">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil earum eius.ectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil earum eius.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aperiam ullam eius idt amet consectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil earum eius.ectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil earum eius.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aperiam ullam eius id</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil earum eius.ectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil earum eius.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aperiam ullam eius idt amet consectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil</p>
       </div>
     </div>
   </div>
