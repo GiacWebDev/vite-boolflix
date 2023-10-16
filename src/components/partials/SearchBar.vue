@@ -8,17 +8,17 @@ export default {
 
 <template>
 
-  <div>
+  <div class="col d-flex justify-content-end">
     <input
-      type="search"
-      placeholder="Cerca un Film o una Serie tv"
-      @keyup.enter="searchMovies"
-      >
-      <select class="form-select" aria-label="Default select example">
-        <option value="1">All</option>
-        <option value="2">Movies</option>
-        <option value="3">Series</option>
-      </select>
+    type="search"
+    placeholder="Cerca un Film o una Serie tv"
+    @keyup.enter="searchMovies"
+    >
+    <select class="form" aria-label="Default select example">
+      <option value="1">All</option>
+      <option value="2">Movies</option>
+      <option value="3">Series</option>
+    </select>
   </div>
   
 </template>
@@ -26,6 +26,12 @@ export default {
 
 
 
-<style>
+<style lang="scss" scoped>
+  
+  input {
+    width: 250px;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
 
 </style>

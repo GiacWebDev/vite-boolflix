@@ -43,11 +43,6 @@ header {
   ._container {
     width: 100%;
   }
-  input {
-    width: 250px;
-    padding: 3px 10px;
-    border-radius: 5px;
-  }
 }
 
 </style>
