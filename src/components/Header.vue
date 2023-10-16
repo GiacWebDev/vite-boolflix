@@ -15,14 +15,14 @@ export default {
 <template>
 
   <header class="d-flex align-items-center">
-    <div class="_container d-flex align-items-center justify-content-between">        
+    <div class="_container d-flex align-items-center justify-content-between">     
+         
         <div class="col">
           <img src="/public/logo-boolflix.png" alt="logo">  
         </div>
 
-        <div class="col d-flex justify-content-end">
-          <SearchBar />
-        </div>
+        <SearchBar />
+
     </div>
 
   </header>

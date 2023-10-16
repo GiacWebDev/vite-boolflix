@@ -1,13 +1,13 @@
 <script>
 
 import Header from './components/Header.vue';
-import Main from './components/Main.vue';
+import CardContainer from './components/CardContainer.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main
+    CardContainer
   }
 }
 </script>
@@ -17,14 +17,13 @@ export default {
 <template>
 
   <Header />
-  <Main />
+  <CardContainer />
   
 </template>
 
 
 
 <style lang="scss">
-
 @use './assets/scss/main.scss';
 
 </style>
