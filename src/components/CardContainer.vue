@@ -5,6 +5,9 @@ import Card from './partials/Card.vue';
 
 export default {
   name: 'CardContainer',
+  props: {
+    titleCont: String
+  },
   components: {
     Card
   },
@@ -24,12 +27,12 @@ export default {
 
   <div class="container align-items-center">
 
-    <h1>Film</h1>
+    <h1>{{ titleCont }}</h1>
 
     <div class="row row-cols-4">
       <div
         class="col p-3"
-        v-for="item in store.movies"
+        v-for="item in store.movie"
         :key="item.id"
         >
 

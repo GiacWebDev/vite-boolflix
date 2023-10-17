@@ -21,18 +21,16 @@ export default {
   },
 
   methods: {
-    getApi() {
+    //accedo dinamicamente alle proprietà di un oggetto con store[type] il quale comprende i due array
+    getApi(type) {
       axios
-        .get(store.api_movies, {
+        .get(type === 'movie' ? store.api_movies : store.api_tvs, {
           params: store.apiParams
         })
         .then(res => {
           // inserisco gli oggetti all'interno dell'array movies
-          store.movies = res.data.results
-          console.log(store.movies)
-          if (store.movies.length === 0) {
-            this.message = 'Film non trovato'
-          }       
+          store[type] = res.data.results
+          console.log(store.movie)    
         })
 
         .catch(err => {
@@ -40,6 +38,11 @@ export default {
         })
 
     },
+    // creo un metodo che fa entrambe le chiamate
+    searchCall() {
+      this.getApi('movie')
+      this.getApi('tv')
+    }
   },
 
 }
@@ -49,9 +52,13 @@ export default {
 
 <template>
 
-  <Header @doSearch="getApi"/>
-  <CardContainer v-if="store.movies.length > 0" />
+  <Header @doSearch="searchCall"/>
+
+  <CardContainer v-if="store.movie.length > 0" titleCont="Film"/>
+  <CardContainer v-if="store.movie.length > 0" titleCont="Serie Tv"/>
+
   <h1 v-else>{{ message }}</h1>
+
 </template>
 
 

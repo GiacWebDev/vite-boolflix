@@ -7,9 +7,10 @@ export const store = reactive({
   apiParams: {
     api_key: "9cb23a7db33519ec387baef21a68e154",
     language: "it-IT",
-    query: "barbie",
+    query: "",
   },
 
-  //creo le array che conterranno i movies
-  movies: [],
+  //creo le array che conterranno i movies e tv
+  movie: [],
+  tv: [],
 });
