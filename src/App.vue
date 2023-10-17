@@ -29,7 +29,7 @@ export default {
           // inserisco gli oggetti all'interno dell'array movies
           store.movies = res.data.results
           console.log(store.movies)
-          // results.push(...res.data.results)
+          
         })
         .catch(err => {
           console.log(err)
@@ -38,10 +38,6 @@ export default {
     },
   },
 
-  mounted() {
-    this.getApi()
-  }
-
 }
 </script>
 
@@ -49,7 +45,7 @@ export default {
 
 <template>
 
-  <Header @startSearch="startSearch(getApi)"/>
+  <Header @doSearch="getApi"/>
   <CardContainer />
 
 </template>

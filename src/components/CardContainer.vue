@@ -20,19 +20,7 @@ export default {
     <h1>Film</h1>
     
     <div class="row row-cols-4">
-      
-      <div class="col p-3">
-        <Card />
-      </div>
-      <div class="col p-3">
-        <Card />
-      </div>
-      <div class="col p-3">
-        <Card />
-      </div>
-      <div class="col p-3">
-        <Card />
-      </div>
+
       <div class="col p-3">
         <Card />
       </div>

@@ -21,7 +21,7 @@ export default {
     <input
     type="search"
     placeholder="Cerca un Film o una Serie tv"
-    v-model.trim="store.apiParams.query"
+    v-model="store.apiParams.query"
     >
 
     <select class="form ms-1" aria-label="Default select example">
@@ -31,7 +31,7 @@ export default {
     </select>
 
     <!-- scateno l'evento -->
-    <button @click="startSearch" class="btn btn-danger ms-1">Cerca</button>
+    <button @click="$emit('startSearch')" class="btn btn-danger ms-1">Cerca</button>
     
   </div>
   

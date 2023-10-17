@@ -10,9 +10,9 @@ export default {
 
   methods: {
     // Inoltro l'evento startSearch al componente SearchBar
-    startSearch() {
-      this.$emit('startSearch');
-      console.log(getApi)
+    search() {
+      this.$emit('doSearch');
+      // console.log(getApi)
     }
   }
 }
@@ -30,7 +30,7 @@ export default {
           <img src="/public/logo-boolflix.png" alt="logo">  
         </div>
 
-        <SearchBar @startSearch="startSearch"/>
+        <SearchBar @startSearch="search"/>
 
     </div>
 
