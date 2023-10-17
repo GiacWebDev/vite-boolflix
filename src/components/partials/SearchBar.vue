@@ -1,6 +1,13 @@
 <script>
+import { store } from '../../assets/data/store'
+
 export default {
-  name: 'SearchBar'
+  name: 'SearchBar',
+  data() {
+    return {
+      store
+    }
+  }
 }
 </script>
 
@@ -13,7 +20,6 @@ export default {
     <input
     type="search"
     placeholder="Cerca un Film o una Serie tv"
-    @keyup.enter="searchMovies"
     >
 
     <select class="form" aria-label="Default select example">
@@ -22,7 +28,7 @@ export default {
       <option value="3">Series</option>
     </select>
 
-    <button @click="searchMovies" class="btn btn-danger">Cerca</button>
+    <button class="btn btn-danger">Cerca</button>
     
   </div>
   

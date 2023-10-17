@@ -17,8 +17,10 @@ export default {
   <!-- queste col dovranno essere impostate con un ciclo ed al loro interno mettere la card/ -->
 
   <div class="container debug align-items-center">
+    <h1>Film</h1>
+    
     <div class="row row-cols-4">
-
+      
       <div class="col p-3">
         <Card />
       </div>

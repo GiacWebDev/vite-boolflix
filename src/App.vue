@@ -2,13 +2,22 @@
 
 import Header from './components/Header.vue';
 import CardContainer from './components/CardContainer.vue';
+import { store } from './assets/data/store';
+import axios from 'axios';
 
 export default {
   name: 'App',
+  data() {
+    return{
+      store,
+    }
+  },
   components: {
     Header,
     CardContainer
-  }
+  },
+
+
 }
 </script>
 
@@ -18,7 +27,7 @@ export default {
 
   <Header />
   <CardContainer />
-  
+
 </template>
 
 

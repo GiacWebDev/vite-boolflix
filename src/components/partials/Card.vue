@@ -1,6 +1,7 @@
 <script>
 export default {
   name: 'Card'
+  
 }
 </script>
 
@@ -8,7 +9,7 @@ export default {
 
 <template>
 
-  <div id="card_box" class="debug-bg" >
+  <div id="card_box" class="debug-bg">
     <!-- parte visibile -->
     <div class="card_poster">
       <!-- <img src="/public/films prova.jpeg" alt="poster"> -->

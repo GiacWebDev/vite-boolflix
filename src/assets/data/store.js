@@ -1,0 +1,15 @@
+import { reactive } from "vue";
+
+export const store = reactive({
+  api_URL: "https://developers.themoviedb.org/3",
+  api_movie: "https://api.themoviedb.org/3/search/movie",
+  api_tv: "https://api.themoviedb.org/3/search/tv",
+
+  apiParams: {
+    api_key: "9cb23a7db33519ec387baef21a68e154",
+    language: "it-IT",
+    query: "",
+  },
+
+  movie: [],
+});
