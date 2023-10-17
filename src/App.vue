@@ -11,6 +11,7 @@ export default {
   data() {
     return{
       store,
+      message: 'Digita il nome di un Film',
     }
   },
 
@@ -29,8 +30,11 @@ export default {
           // inserisco gli oggetti all'interno dell'array movies
           store.movies = res.data.results
           console.log(store.movies)
-          
+          if (store.movies.length === 0) {
+            this.message = 'Film non trovato'
+          }       
         })
+
         .catch(err => {
           console.log(err)
         })
@@ -46,8 +50,8 @@ export default {
 <template>
 
   <Header @doSearch="getApi"/>
-  <CardContainer />
-
+  <CardContainer v-if="store.movies.length > 0" />
+  <h1 v-else>{{ message }}</h1>
 </template>
 
 

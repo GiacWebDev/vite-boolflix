@@ -22,6 +22,7 @@ export default {
     type="search"
     placeholder="Cerca un Film o una Serie tv"
     v-model="store.apiParams.query"
+    @keyup.enter="$emit('startSearch')"
     >
 
     <select class="form ms-1" aria-label="Default select example">

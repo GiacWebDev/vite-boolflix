@@ -24,11 +24,11 @@ export default {
 
     <!-- parte NON visibile -->
     <div class="card_info">
-      <h4>{{ Title }}</h4>
-      <h5>{{ OriginalTitle }}</h5>
+      <h1>{{ Title }}</h1>
+      <h4>{{ OriginalTitle }}</h4>
 
-      <h5>bandiera</h5>
-      <h5>{{ Vote }}</h5>
+      <h5>{{ Language }}</h5>
+      <h5>Voto: {{ Vote }}</h5>
 
       <div class="overview">
         <p>{{ Overview }}</p>
