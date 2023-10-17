@@ -54,8 +54,10 @@ export default {
 
   <Header @doSearch="searchCall"/>
 
-  <CardContainer v-if="store.movie.length > 0" titleCont="Film"/>
-  <CardContainer v-if="store.movie.length > 0" titleCont="Serie Tv"/>
+  <!-- assegno il type che creo in CardContainer in modo da creare due type differenti -->
+
+  <CardContainer v-if="store.movie.length > 0" titleCont="Film" type="movie" />
+  <CardContainer v-if="store.movie.length > 0" titleCont="Serie Tv" type="tv"/>
 
   <h1 v-else>{{ message }}</h1>
 

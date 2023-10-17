@@ -6,7 +6,8 @@ export default {
       OriginalTitle: String,
       Language: String,
       Vote: Number,
-      Overview: String
+      Overview: String,
+      Name: String
   }
 }
 </script>
@@ -23,7 +24,7 @@ export default {
 
     <!-- parte NON visibile -->
     <div class="card_info">
-      <h1>{{ Title }}</h1>
+      <h1>{{ Title || Name }}</h1>
       <h4>{{ OriginalTitle }}</h4>
 
       <h5><strong>Lingua: </strong>
