@@ -22,11 +22,14 @@ export default {
   methods: {
     getApi() {
       axios
-        .get(store.api_URL, {
+        .get(store.api_movies, {
           params: store.apiParams
         })
         .then(res => {
-          console.log(res.data)
+          // inserisco gli oggetti all'interno dell'array movies
+          store.movies = res.data.results
+          console.log(store.movies)
+          // results.push(...res.data.results)
         })
         .catch(err => {
           console.log(err)
@@ -34,7 +37,7 @@ export default {
 
     },
   },
-  
+
   mounted() {
     this.getApi()
   }
@@ -46,7 +49,7 @@ export default {
 
 <template>
 
-  <Header />
+  <Header @startSearch="startSearch(getApi)"/>
   <CardContainer />
 
 </template>

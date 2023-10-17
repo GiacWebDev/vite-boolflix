@@ -9,6 +9,7 @@ export default {
     }
   }
 }
+
 </script>
 
 
@@ -28,7 +29,8 @@ export default {
       <option value="3">Series</option>
     </select>
 
-    <button class="btn btn-danger ms-1">Cerca</button>
+    <!-- scateno l'evento -->
+    <button @click="startSearch" class="btn btn-danger ms-1">Cerca</button>
     
   </div>
   

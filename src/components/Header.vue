@@ -6,8 +6,17 @@ export default {
   name: 'Header',
   components: {
     SearchBar,
+  },
+
+  methods: {
+    // Inoltro l'evento startSearch al componente SearchBar
+    startSearch() {
+      this.$emit('startSearch');
+      console.log(getApi)
+    }
   }
 }
+
 </script>
 
 
@@ -21,7 +30,7 @@ export default {
           <img src="/public/logo-boolflix.png" alt="logo">  
         </div>
 
-        <SearchBar />
+        <SearchBar @startSearch="startSearch"/>
 
     </div>
 
