@@ -1,6 +1,13 @@
 <script>
 export default {
-  name: 'Card'
+  name: 'Card',
+  props: {
+      Title: String,
+      OriginalTitle: String,
+      Language: String,
+      Vote: Number,
+      Overview: String
+  }
   
 }
 </script>
@@ -17,14 +24,14 @@ export default {
 
     <!-- parte NON visibile -->
     <div class="card_info">
-      <h1>Titolo Film o Serie TV</h1>
-      <h4>Titolo Originale</h4>
+      <h4>{{ Title }}</h4>
+      <h5>{{ OriginalTitle }}</h5>
 
       <h5>bandiera</h5>
-      <h5>stelle</h5>
+      <h5>{{ Vote }}</h5>
 
-      <div class="overview debug">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil earum eius.ectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil earum eius.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aperiam ullam eius idt amet consectetur adipisicing elit. Sint aperiam ullam eius id cum necessitatibus adipisci! Vel nihil</p>
+      <div class="overview">
+        <p>{{ Overview }}</p>
       </div>
     </div>
   </div>

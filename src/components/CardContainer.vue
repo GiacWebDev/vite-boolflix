@@ -33,7 +33,15 @@ export default {
         :key="item.id"
         >
 
-        <Card />
+        <Card 
+        :Title="item.title"
+        :OriginalTitle="item.original_title"
+        :Language="item.original_language"
+        :Vote="item.vote_average"
+        :Overview="item.overview"
+        />
+      
+      
       </div>
 
     </div>
