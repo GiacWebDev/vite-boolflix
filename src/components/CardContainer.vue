@@ -35,11 +35,11 @@ export default {
     <div class="row row-cols-4">
       <div
         class="col p-3"
-        v-for="item in store[type]"
+        v-for="item in (type === 'movie' ? store.movie : store.tv)"
         :key="item.id"
         >
 
-        <Card if="" (store[type])
+        <Card
         :Title="item.title"
         :OriginalTitle="item.original_title"
         :Language="item.original_language"
