@@ -1,11 +1,17 @@
 <script>
 
+import { store } from '../assets/data/store';
 import Card from './partials/Card.vue';
 
 export default {
   name: 'CardContainer',
   components: {
     Card
+  },
+  data() {
+    return {
+      store
+    }
   }
 }
 </script>
@@ -16,12 +22,17 @@ export default {
 
   <!-- queste col dovranno essere impostate con un ciclo ed al loro interno mettere la card/ -->
 
-  <div class="container debug align-items-center">
-    <h1>Film</h1>
-    
-    <div class="row row-cols-4">
+  <div class="container align-items-center">
 
-      <div class="col p-3">
+    <h1>Film</h1>
+
+    <div class="row row-cols-4">
+      <div
+        class="col p-3"
+        v-for="item in store.movies"
+        :key="item.id"
+        >
+
         <Card />
       </div>
 
