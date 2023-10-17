@@ -21,6 +21,7 @@ export default {
     <input
     type="search"
     placeholder="Cerca un Film o una Serie tv"
+    v-model.trim="store.apiParams.query"
     >
 
     <select class="form ms-1" aria-label="Default select example">
