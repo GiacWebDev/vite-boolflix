@@ -7,16 +7,37 @@ import axios from 'axios';
 
 export default {
   name: 'App',
+  
   data() {
     return{
       store,
     }
   },
+
   components: {
     Header,
     CardContainer
   },
 
+  methods: {
+    getApi() {
+      axios
+        .get(store.api_URL, {
+          params: store.apiParams
+        })
+        .then(res => {
+          console.log(res.data)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+
+    },
+  },
+  
+  mounted() {
+    this.getApi()
+  }
 
 }
 </script>

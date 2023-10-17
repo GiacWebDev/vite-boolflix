@@ -22,13 +22,13 @@ export default {
     placeholder="Cerca un Film o una Serie tv"
     >
 
-    <select class="form" aria-label="Default select example">
+    <select class="form ms-1" aria-label="Default select example">
       <option value="1">All</option>
       <option value="2">Movies</option>
       <option value="3">Series</option>
     </select>
 
-    <button class="btn btn-danger">Cerca</button>
+    <button class="btn btn-danger ms-1">Cerca</button>
     
   </div>
   
