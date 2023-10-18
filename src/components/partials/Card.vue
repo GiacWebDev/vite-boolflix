@@ -1,20 +1,21 @@
 <script>
 
-import Stars from './Stars.vue';
-
 export default {
   name: 'Card',
   props: {
       Title: String,
       OriginalTitle: String,
       Language: String,
-      Vote: Number,
       Overview: String,
-      Name: String
+      Name: String,
+      Vote: Number
   },
-  components: {
-    Stars
-}
+
+  computed: {
+    calcStar() {
+      return Math.ceil(this.Vote / 2)
+    }
+  }
 }
 </script>
 
@@ -62,7 +63,16 @@ export default {
         <span v-else>{{ Language }}</span>
       </h5>
 
-      <Stars />
+      <div class="star-box">
+        <i
+          v-for="i in 5"
+          :key="i"
+          class="fa-star"
+          :class="(i <= calcStar) ? 'fa-solid' : 'fa-regular'" 
+        ></i>
+      </div>
+
+  
 
       <div class="overview">
         <p>{{ Overview }}</p>
