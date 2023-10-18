@@ -1,4 +1,7 @@
 <script>
+
+import Stars from './Stars.vue';
+
 export default {
   name: 'Card',
   props: {
@@ -8,7 +11,10 @@ export default {
       Vote: Number,
       Overview: String,
       Name: String
-  }
+  },
+  components: {
+    Stars
+}
 }
 </script>
 
@@ -16,7 +22,7 @@ export default {
 
 <template>
 
-  <div id="card_box" class="debug-bg">
+  <div id="card_box">
     <!-- parte visibile -->
     <div class="card_poster">
       <!-- <img src="/public/films prova.jpeg" alt="poster"> -->
@@ -56,8 +62,7 @@ export default {
         <span v-else>{{ Language }}</span>
       </h5>
 
-
-      <h5>Voto: {{ Vote }}</h5>
+      <Stars />
 
       <div class="overview">
         <p>{{ Overview }}</p>

@@ -27,7 +27,7 @@ export default {
     <div class="_container d-flex align-items-center justify-content-between">     
          
         <div class="col">
-          <img src="/public/logo-boolflix.png" alt="logo">  
+          <img src="/logo-boolflix.png" alt="logo">  
         </div>
 
         <SearchBar @startSearch="search"/>
