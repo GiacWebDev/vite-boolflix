@@ -46,6 +46,7 @@ export default {
         :Vote="item.vote_average"
         :Overview="item.overview"
         :Name="item.original_name"
+        :Image="item.poster_path"
         />
       
       

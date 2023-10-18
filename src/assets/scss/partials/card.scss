@@ -7,12 +7,18 @@
     box-shadow: 0px 0px 10px rgba(255,255,255,0.6);
   }
 
+  &:hover {
+    .card_poster {
+      display: none;
+    }
+  }
+
   &:hover .card_info {
     display: block;
   }
   
   .card_info {
-    // display: none;
+    display: none;
     position: absolute;
     top: 10;
     width: 100%;

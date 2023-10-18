@@ -8,7 +8,9 @@ export default {
       Language: String,
       Overview: String,
       Name: String,
-      Vote: Number
+      Vote: Number,
+      Image: String
+
   },
 
   computed: {
@@ -26,7 +28,10 @@ export default {
   <div id="card_box">
     <!-- parte visibile -->
     <div class="card_poster">
-      <!-- <img src="/public/films prova.jpeg" alt="poster"> -->
+      <!-- inserisco il link che mi da l'API e aggiungo il poster_path per caricare l'immagine per ogni card -->
+      <img v-if="Image" :src="'https://image.tmdb.org/t/p/w300/' + Image" alt="">
+      <img v-else src="/no image.jpeg" alt="">
+
     </div>
 
     <!-- parte NON visibile -->
@@ -89,6 +94,11 @@ export default {
 
 img {
   width: 25px;
+}
+
+.card_poster img {
+  width: 100%;
+  height: 400px
 }
 
 </style>
